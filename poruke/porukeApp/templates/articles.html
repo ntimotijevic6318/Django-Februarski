@@ -1,0 +1,15 @@
+{%  extends 'master.html' %}
+
+{% block title %}
+    Articles
+{% endblock %}
+
+{%  block content %}
+    <div class="list-group">
+        {% for article in articles %}
+            <a class="list-group-item list-group-item-action" href="{% url 'porukeApp:article' article.id %}">
+                {{ article.markaTelefona }}
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
